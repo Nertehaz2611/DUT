@@ -1,0 +1,6 @@
+So luong mon an trong danh sach nay: 5
+1|Banh bao chien|500000
+2|Salad ca ngu|30000
+3|Rau muong xao toi|30000
+4|Sup hai san|40000
+5|Bo xao la lot|50000

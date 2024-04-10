@@ -1,0 +1,16 @@
+So luong nhan vien trong danh sach nay: 3
+|
+Ten nhan vien: Nguyen Thanh Hieu
+Gioi tinh: 1
+Nam sinh: 2004
+So dien thoai: 0522984048
+|
+Ten nhan vien: Tran Duc Duy
+Gioi tinh: 1
+Nam sinh: 2004
+So dien thoai: 0905227016
+|
+Ten nhan vien: Nguyen Thi B
+Gioi tinh: 0
+Nam sinh: 2003
+So dien thoai: 0123456789

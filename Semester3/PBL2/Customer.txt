@@ -1,0 +1,17 @@
+So luong khach hang trong danh sach nay: 4
+|
+Ten khach hang: Nguyen Thanh Hieu
+So dien thoai: 0522984048
+Mat khau: 12345678
+|
+Ten khach hang: Tran Duc Duy
+So dien thoai: 0905227016
+Mat khau: 12345678
+|
+Ten khach hang: Nguyen Van A
+So dien thoai: 0123456789
+Mat khau: 12341234
+|
+Ten khach hang: Hon Lieu
+So dien thoai: 0905338115
+Mat khau: 123456789

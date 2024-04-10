@@ -1,0 +1,22 @@
+|
+Ma hoa don: 1
+Ma don hang: 1
+Khach hang: Nguyen Thanh Hieu
+SDT: 0522984048
+Ma ban: 1
+So mon an da dat: 3
+1              _Banh bao chien_               20000
+2                _Salad ca ngu_               30000
+3           _Rau muong xao toi_               30000
+Tong thanh tien: 80000
+|
+Ma hoa don: 2
+Ma don hang: 2
+Khach hang: Hon Lieu
+SDT: 0905338115
+Ma ban: 12
+So mon an da dat: 3
+1              _Banh bao chien_              500000
+4                 _Sup hai san_               40000
+5               _Bo xao la lot_               50000
+Tong thanh tien: 590000
