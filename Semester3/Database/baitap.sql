@@ -1,0 +1,89 @@
+﻿---TRUY VAN CO BAN---
+
+---Truy van don gian---
+
+---Cau 1---
+SELECT *
+FROM NHANVIEN as NV
+WHERE NV.PHG = 4
+
+---Cau 2---
+SELECT *
+FROM NHANVIEN as NV
+WHERE NV.LUONG > 30000
+
+---Cau 3---
+SELECT *
+FROM NHANVIEN as NV
+WHERE (NV.LUONG > 25000 AND NV.PHG = 4) OR (NV.LUONG > 30000 AND NV.PHG = 5)
+
+---Cau 4--- 
+SELECT NV.HONV + ' ' + NV.TENLOT + ' ' + NV.TENNV as "HO VA TEN"
+FROM NHANVIEN as NV
+WHERE NV.DCHI LIKE '%TPHCM'
+
+---Cau 5---
+SELECT NV.HONV + ' ' + NV.TENLOT + ' ' + NV.TENNV as "HO VA TEN"
+FROM NHANVIEN as NV
+WHERE NV.HONV LIKE 'N%'
+
+---Note: 'N%' la N dung dau, '%N' la N dung dau va dung giua, '%N%' la N dung dau, giua, cuoi
+
+---Cau 6---
+SELECT NV.NGSINH, NV.DCHI
+FROM NHANVIEN as NV
+WHERE NV.HONV + ' ' + NV.TENLOT + ' ' + NV.TENNV = N'Đinh Bá Tiến' 
+
+---Cau 7---
+SELECT *
+FROM NHANVIEN as NV
+WHERE YEAR(NV.NGSINH) >= 1960 AND YEAR(NV.NGSINH) <= 1965
+
+---Cau 8---
+SELECT NV.HONV + ' ' + NV.TENLOT + ' ' + NV.TENNV as "HO VA TEN", YEAR(NV.NGSINH)
+FROM NHANVIEN as NV
+
+---Cau 9---
+SELECT NV.HONV + ' ' + NV.TENLOT + ' ' + NV.TENNV as "HO VA TEN", YEAR(GETDATE()) - YEAR(NV.NGSINH) as TUOI
+FROM NHANVIEN as NV
+
+---Truy van co su dung phep ket---
+
+---Cau 10---
+SELECT PB.TENPHG, DD.DIADIEM
+FROM PHONGBAN as PB join DIADIEM_PHG as DD on PB.MAPHG = DD.MAPHG
+
+---Cau 11---
+SELECT NV.HONV + ' ' + NV.TENLOT + ' ' + NV.TENNV as "HO VA TEN", PB.TENPHG
+FROM NHANVIEN NV join PHONGBAN PB on NV.MANV = PB.TRPHG
+
+---Cau 12---
+SELECT NV.HONV + ' ' + NV.TENLOT + ' ' + NV.TENNV as "HO VA TEN", NV.DCHI
+FROM NHANVIEN NV join PHONGBAN PB on NV.PHG = (
+												SELECT PB.MAPHG
+												WHERE PB.TENPHG = N'Nghiên Cứu'
+											)
+
+---Cau 13---
+SELECT DA.TENDA, PB.TENPHG, NV.HONV + ' ' + NV.TENLOT + ' ' + NV.TENNV as "HO VA TEN", PB.NG_NHANCHUC 
+FROM DEAN DA join PHONGBAN PB on DA.PHONG = PB.MAPHG join NHANVIEN NV on PB.TRPHG = NV.MANV
+WHERE DA.DDIEM_DA = 'HA NOI'
+
+---Cau 14---
+SELECT NV.TENNV, TN.TENTN
+FROM NHANVIEN NV join THANNHAN TN on NV.MANV = TN.MA_NVIEN
+WHERE NV.PHAI = N'Nữ'
+
+---Cau 15---
+
+---Cau 16---
+SELECT NV.HONV + ' ' + NV.TENLOT + ' ' + NV.TENNV as "NHAN VIEN", NV2.HONV + ' ' + NV2.TENLOT + ' ' + NV2.TENNV as "TRUONG PHONG"
+FROM NHANVIEN NV join PHONGBAN PB on NV.PHG = PB.MAPHG join NHANVIEN NV2 on PB.TRPHG = NV2.MANV
+
+---Cau 17---
+
+---Cau 18---
+SELECT DA.TENDA
+FROM NHANVIEN NV join PHANCONG PC on NV.MANV = PC.MA_NVIEN join DEAN DA on DA.MADA = PC.MADA
+WHERE NV.HONV + ' ' + NV.TENLOT + ' ' + NV.TENNV = N'Đinh Bá Tiến'
+
